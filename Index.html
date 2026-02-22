@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Кубы Времени</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1b2b4a, #05070d);
+      color: #e8f1ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      padding: 28px 20px 32px;
+      background: linear-gradient(180deg, rgba(20,40,80,.9), rgba(5,10,20,.95));
+      border: 2px solid rgba(120,180,255,.4);
+      border-radius: 18px;
+      box-shadow: 0 0 40px rgba(80,140,255,.25);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .rarity {
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #8ecbff;
+      margin-bottom: 12px;
+      animation: glowText 3s infinite alternate;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: normal;
+      color: #b8d6ff;
+      margin-bottom: 20px;
+    }
+
+    .siara-img {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 20px;
+      display: block;
+      animation: float 4s ease-in-out infinite;
+      filter: drop-shadow(0 0 25px rgba(120,180,255,.45));
+    }
+
+    .status {
+      font-size: 14px;
+      color: #ffb6b6;
+      margin-bottom: 18px;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.4;
+      margin-bottom: 26px;
+      color: #d7e6ff;
+    }
+
+    .activate-btn {
+      display: inline-block;
+      padding: 14px 26px;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(90deg, #3a7cff, #5fb3ff);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 20px rgba(90,160,255,.6);
+      animation: pulse 2.2s infinite;
+    }
+
+    .activate-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* Анимации */
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 18px rgba(90,160,255,.5); }
+      50% { box-shadow: 0 0 32px rgba(120,190,255,.9); }
+      100% { box-shadow: 0 0 18px rgba(90,160,255,.5); }
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 6px rgba(120,180,255,.4); }
+      to { text-shadow: 0 0 14px rgba(120,180,255,.9); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="rarity">РЕДКОСТЬ · РЕДКИЙ</div>
+
+    <h1>СИАРА</h1>
+    <h2>Хранительница Времени</h2>
+
+    <!-- КАРТИНКА СИАРЫ -->
+    <!-- ВСТАВЬ СЮДА ССЫЛКУ НА КАРТИНКУ -->
+    <img 
+      src="https://images.unsplash.com/photo-1606112219348-204d7d8b94ee" 
+      alt="Сиара" 
+      class="siara-img"
+    >
+
+    <div class="status">Статус: не активирована</div>
+
+    <div class="description">
+      Ты нашёл Куб Времени.<br>
+      Чтобы пробудить силу Сиары,<br>
+      войди в мир Кубов Времени.
+    </div>
+
+    <a class="activate-btn" href="#">
+      АКТИВИРОВАТЬ ПЕРСОНАЖА
+    </a>
+  </div>
+
+</body>
+</html>
